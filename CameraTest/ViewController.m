@@ -80,7 +80,10 @@ int secondsLeft;
         }
         
         // Stop detector when timer runs out, and segue to results view
-        if (secondsLeft == 0) {
+        if (secondsLeft == 0 && timer != nil) {
+            [timer invalidate];
+            timer = nil;
+            //faces==nil;
             [self destroyDetector];
             float leadershipScore = leadershipScoreAgg/frames;
             NSLog(@"Leadership Final: %f",leadershipScore);
