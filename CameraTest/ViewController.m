@@ -14,9 +14,38 @@
 
 @interface ViewController ()
 
+
 @end
 
 @implementation ViewController
+@synthesize myCounterLabel;
+
+int hours, minutes, seconds;
+int secondsLeft;
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    secondsLeft = 60;
+    [self countdownTimer];
+}
+
+- (void)updateCounter:(NSTimer *)theTimer {
+    if(secondsLeft > 0 ) {
+        secondsLeft -- ;
+        hours = secondsLeft / 3600;
+        minutes = (secondsLeft % 3600) / 60;
+        seconds = (secondsLeft %3600) % 60;
+        myCounterLabel.text = [NSString stringWithFormat:@"%02d:%02d:%02d", hours, minutes, seconds];
+        self.timerLabel.text = [NSString stringWithFormat:@"%i",secondsLeft];
+    } else {
+        secondsLeft = 60;
+    }
+}
+
+-(void)countdownTimer {
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateCounter:) userInfo:nil repeats:YES];
+}
 
 #pragma mark -
 #pragma mark Convenience Methods
@@ -30,7 +59,6 @@
     {
         // Here's where you actually "do stuff" with the face object (e.g. examine the emotions, expressions,
         // emojis, and other metrics).
-        //NSLog(@"%@", face);
         
         float anger = face.emotions.anger;
         float disgust = face.emotions.disgust;
@@ -38,7 +66,11 @@
         float sadness = face.emotions.sadness;
         float joy = face.emotions.joy;
         
-        NSLog(@"anger:%f,disgust:%f,surprise:%f,sadness:%f,joy:%f",anger,disgust,surprise,sadness,joy);
+        if (secondsLeft == 0) {
+            [detector stop];
+        }
+        
+        //NSLog(@"anger:%f,disgust:%f,surprise:%f,sadness:%f,joy:%f",anger,disgust,surprise,sadness,joy);
     }
 }
 
@@ -135,4 +167,6 @@
     [super didReceiveMemoryWarning];
 }
 
+- (IBAction)startTimer:(UIButton *)sender {
+}
 @end

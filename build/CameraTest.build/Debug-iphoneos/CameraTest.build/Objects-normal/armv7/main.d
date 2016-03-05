@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/tomeldridge/Desktop/EmotionLab/ios-sdk-samples-master/apps/CameraTest/CameraTest/main.m \
-  /Users/tomeldridge/Desktop/EmotionLab/ios-sdk-samples-master/apps/CameraTest/CameraTest/AppDelegate.h
+  /Users/tomeldridge/Desktop/EmotionLab/EmotionInterview/apps/EmotionInterview/CameraTest/main.m \
+  /Users/tomeldridge/Desktop/EmotionLab/EmotionInterview/apps/EmotionInterview/CameraTest/AppDelegate.h
