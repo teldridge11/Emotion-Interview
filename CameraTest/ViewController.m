@@ -26,7 +26,7 @@ int secondsLeft;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    secondsLeft = 60;
+    secondsLeft = 10;
     [self countdownTimer];
 }
 
@@ -38,8 +38,12 @@ int secondsLeft;
         seconds = (secondsLeft %3600) % 60;
         myCounterLabel.text = [NSString stringWithFormat:@"%02d:%02d:%02d", hours, minutes, seconds];
         self.timerLabel.text = [NSString stringWithFormat:@"%i",secondsLeft];
-    } else {
-        secondsLeft = 60;
+        if(secondsLeft > 5) {
+            self.timerLabel.textColor = [UIColor greenColor];
+        }
+        else {
+            self.timerLabel.textColor = [UIColor redColor];
+        }
     }
 }
 
@@ -54,23 +58,33 @@ int secondsLeft;
 // You will want to do something with the face (or faces) found.
 - (void)processedImageReady:(AFDXDetector *)detector image:(UIImage *)image faces:(NSDictionary *)faces atTime:(NSTimeInterval)time;
 {
+    float leadershipScoreAgg = 0;
+    int frames = 0;
+    
     // iterate on the values of the faces dictionary
     for (AFDXFace *face in [faces allValues])
     {
-        // Here's where you actually "do stuff" with the face object (e.g. examine the emotions, expressions,
-        // emojis, and other metrics).
+        frames++;
         
+        // Emotion variables
         float anger = face.emotions.anger;
-        float disgust = face.emotions.disgust;
-        float surprise = face.emotions.surprise;
         float sadness = face.emotions.sadness;
         float joy = face.emotions.joy;
         
-        if (secondsLeft == 0) {
-            [detector stop];
+        if (anger == 0 && joy == 0 && sadness == 0) {
+            leadershipScoreAgg += 0;
+        }
+        else {
+            leadershipScoreAgg += (anger+joy+sadness)/3;
+            //NSLog(@"Leadership: %f",leadershipScore);
         }
         
-        //NSLog(@"anger:%f,disgust:%f,surprise:%f,sadness:%f,joy:%f",anger,disgust,surprise,sadness,joy);
+        // Stop detector when timer runs out, and segue to results view
+        if (secondsLeft == 0) {
+            [self destroyDetector];
+            float leadershipScore = leadershipScoreAgg/frames;
+            NSLog(@"Leadership Final: %f",leadershipScore);
+        }
     }
 }
 
