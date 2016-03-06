@@ -4,11 +4,15 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>AppIcon29x29@2x.png</key>
+		<data>
+		CR6IQgrV8m32BxXu4UT97jb3rQs=
+		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zlKt6q26iz+IK9FNpXBu9PNmKJk=
+			zZwNUUh3gBRrrz4mQdPR+uCluqE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -26,7 +30,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ySd3y/YRr1diqVd42r8+OOjp6i0=
+			B55OMD3ZjZSUPKiO4Mivcce5Tg4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -114,7 +118,7 @@
 		</dict>
 		<key>Frameworks/Affdex.framework/Affdex</key>
 		<data>
-		q2r+ccwErVZ7ReprRpLM2s2ylts=
+		JTyOKUnPmQrnIXO2TZguEUL3xzU=
 		</data>
 		<key>Frameworks/Affdex.framework/Info.plist</key>
 		<data>
@@ -386,7 +390,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/489q5/ugOwNqv66Jwnzv1RC6tg=
+		uof4YqqXaLKo6ol9EdOuibdQe8w=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -394,16 +398,20 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		Qcawkbp8B0dNmDtkB0Xa2bo8h+s=
+		SPx7qrxDVfU8hAhEl3ty9wEObP8=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>AppIcon29x29@2x.png</key>
+		<data>
+		CR6IQgrV8m32BxXu4UT97jb3rQs=
+		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zlKt6q26iz+IK9FNpXBu9PNmKJk=
+			zZwNUUh3gBRrrz4mQdPR+uCluqE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -421,7 +429,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ySd3y/YRr1diqVd42r8+OOjp6i0=
+			B55OMD3ZjZSUPKiO4Mivcce5Tg4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -509,7 +517,7 @@
 		</dict>
 		<key>Frameworks/Affdex.framework/Affdex</key>
 		<data>
-		q2r+ccwErVZ7ReprRpLM2s2ylts=
+		JTyOKUnPmQrnIXO2TZguEUL3xzU=
 		</data>
 		<key>Frameworks/Affdex.framework/Info.plist</key>
 		<data>
@@ -781,7 +789,7 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		Qcawkbp8B0dNmDtkB0Xa2bo8h+s=
+		SPx7qrxDVfU8hAhEl3ty9wEObP8=
 		</data>
 	</dict>
 	<key>rules</key>

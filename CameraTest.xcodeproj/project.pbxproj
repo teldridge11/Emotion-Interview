@@ -33,7 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6819DE591C5AA1C300E60826 /* CameraTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6819DE591C5AA1C300E60826 /* Candidate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Candidate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6819DE5D1C5AA1C300E60826 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6819DE5F1C5AA1C300E60826 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6819DE601C5AA1C300E60826 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		6819DE5A1C5AA1C300E60826 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6819DE591C5AA1C300E60826 /* CameraTest.app */,
+				6819DE591C5AA1C300E60826 /* Candidate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,7 +121,7 @@
 			);
 			name = CameraTest;
 			productName = CameraTest;
-			productReference = 6819DE591C5AA1C300E60826 /* CameraTest.app */;
+			productReference = 6819DE591C5AA1C300E60826 /* Candidate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -299,7 +299,7 @@
 				INFOPLIST_FILE = CameraTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.affectiva.CameraTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Candidate;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -317,7 +317,7 @@
 				INFOPLIST_FILE = CameraTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.affectiva.CameraTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Candidate;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
