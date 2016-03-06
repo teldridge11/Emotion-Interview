@@ -32,9 +32,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="IKx-U8-g3x" kind="popoverPresentation" popoverAnchorView="gzO-pG-v2c" id="FRz-ld-MjG">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
+                                            <segue destination="IKx-U8-g3x" kind="presentation" id="ghv-q8-KZU"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2O9-Dq-Wk8">
@@ -113,31 +111,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnP-wI-zn8">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kfY-cY-EzV">
-                                        <rect key="frame" x="180" y="200" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <attributedString key="attributedText">
-                                            <fragment>
-                                                <string key="content">You will be given a question with 90 seconds to answer.  Once you're  finished, your emotional results will be sent to the employer.</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="18" name="Avenir-Book"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amr-II-CsS">
-                                        <rect key="frame" x="200" y="495" width="200" height="55"/>
-                                        <color key="backgroundColor" red="0.092180658949999994" green="0.24714278740000001" blue="0.47883128159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="awP-Jv-upM"/>
-                                            <constraint firstAttribute="height" constant="55" id="g8c-fD-nnR"/>
-                                        </constraints>
-                                        <state key="normal" title="B E G I N">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gff-gL-mln">
                                         <rect key="frame" x="18" y="37" width="121" height="30"/>
                                         <subviews>
@@ -162,12 +135,42 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amr-II-CsS">
+                                        <rect key="frame" x="200" y="495" width="200" height="55"/>
+                                        <color key="backgroundColor" red="0.092180658949999994" green="0.24714278740000001" blue="0.47883128159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="awP-Jv-upM"/>
+                                            <constraint firstAttribute="height" constant="55" id="g8c-fD-nnR"/>
+                                        </constraints>
+                                        <state key="normal" title="B E G I N">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" id="4jV-6Q-Ceh"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kfY-cY-EzV">
+                                        <rect key="frame" x="180" y="232" width="240" height="135"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">You will be given a question with 90 seconds to answer.  Once you're  finished, your emotional results will be sent to the employer.</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="18" name="Avenir-Book"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="kfY-cY-EzV" firstAttribute="centerX" secondItem="tnP-wI-zn8" secondAttribute="centerX" id="1Jw-ck-d9k"/>
                                     <constraint firstItem="amr-II-CsS" firstAttribute="centerX" secondItem="tnP-wI-zn8" secondAttribute="centerX" id="61q-Pz-RDc"/>
                                     <constraint firstItem="Gff-gL-mln" firstAttribute="top" secondItem="tnP-wI-zn8" secondAttribute="top" constant="37" id="O5h-K5-rjt"/>
+                                    <constraint firstItem="kfY-cY-EzV" firstAttribute="centerY" secondItem="tnP-wI-zn8" secondAttribute="centerY" id="XQ0-6P-wEc"/>
                                     <constraint firstItem="Gff-gL-mln" firstAttribute="leading" secondItem="tnP-wI-zn8" secondAttribute="leading" constant="18" id="gke-Gp-5Lb"/>
                                     <constraint firstAttribute="bottom" secondItem="amr-II-CsS" secondAttribute="bottom" constant="50" id="mfP-57-xNi"/>
                                 </constraints>
@@ -185,24 +188,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cn1-qb-6Mk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-414" y="229"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="hsP-Pt-7ok">
-            <objects>
-                <viewController id="ct0-dM-crq" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4sb-Zx-hWY"/>
-                        <viewControllerLayoutGuide type="bottom" id="wQl-3l-484"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Trv-cG-Mx3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Eu-FZ-rao" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-484" y="922"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -258,16 +243,17 @@
                         <outlet property="cameraView" destination="77m-wX-26O" id="82G-7R-jli"/>
                         <outlet property="questionLabel" destination="5Cz-km-CYq" id="NAL-c6-62P"/>
                         <outlet property="timerLabel" destination="AMh-Ag-keH" id="KIh-pW-2hg"/>
+                        <segue destination="8qq-1t-8dS" kind="presentation" identifier="seeResultsSegue" id="cSQ-gA-XgL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="245" y="229"/>
         </scene>
-        <!--View Controller-->
+        <!--See Results View Controller-->
         <scene sceneID="HGP-F0-RbH">
             <objects>
-                <viewController id="8qq-1t-8dS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SeeResults" id="8qq-1t-8dS" customClass="SeeResultsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QlF-QB-w3U"/>
                         <viewControllerLayoutGuide type="bottom" id="uQs-Js-msv"/>
@@ -276,20 +262,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6cf-By-UjE">
-                                <rect key="frame" x="-7" y="13" width="600" height="600"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cf-By-UjE">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FsP-ef-8VV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Thank you for completing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpF-qO-VOr">
+                                        <rect key="frame" x="156" y="145" width="288" height="34"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="the question!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdy-sy-wS5">
+                                        <rect key="frame" x="224" y="187" width="152" height="35"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44a-pv-bjc">
+                                        <rect key="frame" x="200" y="495" width="200" height="55"/>
+                                        <color key="backgroundColor" red="0.021213657899999998" green="0.80778978619999997" blue="0.67103300369999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="d6P-ml-uBp"/>
+                                            <constraint firstAttribute="height" constant="55" id="vyh-IK-OZ7"/>
+                                        </constraints>
+                                        <state key="normal" title="N E X T   Q U E S T I O N">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WdW-lu-aAR">
                                         <rect key="frame" x="18" y="37" width="121" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Candid" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEa-bc-4Kg">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Candid" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEx-43-5Hr">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
                                                 <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="25"/>
-                                                <color key="textColor" red="0.15294117647058825" green="0.43137254901960786" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.1529411765" green="0.43137254899999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMF-KG-5uu">
-                                                <rect key="frame" x="80" y="0.0" width="54" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVk-HO-n6O">
+                                                <rect key="frame" x="81" y="0.0" width="54" height="30"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="ate">
                                                         <attributes>
@@ -303,37 +312,43 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Thank you for completing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpF-qO-VOr">
-                                        <rect key="frame" x="156" y="145" width="288" height="34"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zt1-SM-zBE">
+                                        <rect key="frame" x="233" y="256" width="134" height="21"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Leadership Score">
+                                                <attributes>
+                                                    <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <font key="NSFont" size="17" name="Avenir-Book"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="the interview!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdy-sy-wS5">
-                                        <rect key="frame" x="224" y="187" width="152" height="34"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSl-jg-U3e">
+                                        <rect key="frame" x="275" y="285" width="51" height="21"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Score">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.092180658949999994" green="0.24714278740000001" blue="0.47883128159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="17" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44a-pv-bjc">
-                                        <rect key="frame" x="200" y="495" width="200" height="55"/>
-                                        <color key="backgroundColor" red="0.021213657899999998" green="0.80778978619999997" blue="0.67103300369999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="d6P-ml-uBp"/>
-                                            <constraint firstAttribute="height" constant="55" id="vyh-IK-OZ7"/>
-                                        </constraints>
-                                        <state key="normal" title="S E E   R E S U L T S">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="FsP-ef-8VV" firstAttribute="leading" secondItem="6cf-By-UjE" secondAttribute="leading" constant="18" id="0pZ-Rd-AEj"/>
                                     <constraint firstItem="SpF-qO-VOr" firstAttribute="centerX" secondItem="6cf-By-UjE" secondAttribute="centerX" id="7ia-nr-xAd"/>
-                                    <constraint firstItem="FsP-ef-8VV" firstAttribute="top" secondItem="6cf-By-UjE" secondAttribute="top" constant="37" id="Ahy-DS-kBO"/>
+                                    <constraint firstItem="zt1-SM-zBE" firstAttribute="centerX" secondItem="6cf-By-UjE" secondAttribute="centerX" id="Aok-DY-tNu"/>
+                                    <constraint firstItem="mSl-jg-U3e" firstAttribute="centerX" secondItem="6cf-By-UjE" secondAttribute="centerX" id="Etn-au-NB7"/>
                                     <constraint firstItem="Kdy-sy-wS5" firstAttribute="top" secondItem="SpF-qO-VOr" secondAttribute="bottom" constant="8" id="HUv-Ig-6L0"/>
+                                    <constraint firstItem="WdW-lu-aAR" firstAttribute="top" secondItem="6cf-By-UjE" secondAttribute="top" constant="37" id="LNG-xr-lbe"/>
+                                    <constraint firstItem="zt1-SM-zBE" firstAttribute="top" secondItem="Kdy-sy-wS5" secondAttribute="bottom" constant="34" id="QEf-RH-ujo"/>
                                     <constraint firstItem="Kdy-sy-wS5" firstAttribute="centerX" secondItem="6cf-By-UjE" secondAttribute="centerX" id="ZYG-Tk-qql"/>
+                                    <constraint firstItem="WdW-lu-aAR" firstAttribute="leading" secondItem="6cf-By-UjE" secondAttribute="leading" constant="18" id="c4Y-Qw-cuY"/>
+                                    <constraint firstItem="mSl-jg-U3e" firstAttribute="top" secondItem="zt1-SM-zBE" secondAttribute="bottom" constant="8" id="cC3-hk-KEq"/>
                                     <constraint firstItem="44a-pv-bjc" firstAttribute="centerX" secondItem="6cf-By-UjE" secondAttribute="centerX" id="k7h-Yu-Lk6"/>
                                     <constraint firstItem="SpF-qO-VOr" firstAttribute="top" secondItem="6cf-By-UjE" secondAttribute="top" constant="145" id="nph-hP-DQ7"/>
                                     <constraint firstAttribute="bottom" secondItem="44a-pv-bjc" secondAttribute="bottom" constant="50" id="pZt-U1-jtL"/>
@@ -348,6 +363,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="6cf-By-UjE" secondAttribute="trailing" constant="-20" id="kpn-pq-0tI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="mSl-jg-U3e" id="1oY-ku-3Gm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kGw-2X-wje" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

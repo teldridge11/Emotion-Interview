@@ -15,6 +15,7 @@
 		6819DE6C1C5AA1C300E60826 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6819DE6A1C5AA1C300E60826 /* LaunchScreen.storyboard */; };
 		813603E31C8A0E2000396DF6 /* Affdex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 813603E21C8A0E2000396DF6 /* Affdex.framework */; };
 		81CCD5EC1C8A45A400C82ED1 /* Affdex.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 813603E21C8A0E2000396DF6 /* Affdex.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		81CCD5F81C8C64D800C82ED1 /* SeeResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CCD5F71C8C64D800C82ED1 /* SeeResultsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,8 @@
 		6819DE6B1C5AA1C300E60826 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6819DE6D1C5AA1C300E60826 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		813603E21C8A0E2000396DF6 /* Affdex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Affdex.framework; sourceTree = "<group>"; };
+		81CCD5F61C8C64D800C82ED1 /* SeeResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeeResultsViewController.h; sourceTree = "<group>"; };
+		81CCD5F71C8C64D800C82ED1 /* SeeResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeeResultsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				6819DE601C5AA1C300E60826 /* AppDelegate.m */,
 				6819DE621C5AA1C300E60826 /* ViewController.h */,
 				6819DE631C5AA1C300E60826 /* ViewController.m */,
+				81CCD5F61C8C64D800C82ED1 /* SeeResultsViewController.h */,
+				81CCD5F71C8C64D800C82ED1 /* SeeResultsViewController.m */,
 				6819DE651C5AA1C300E60826 /* Main.storyboard */,
 				6819DE681C5AA1C300E60826 /* Assets.xcassets */,
 				6819DE6A1C5AA1C300E60826 /* LaunchScreen.storyboard */,
@@ -171,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6819DE641C5AA1C300E60826 /* ViewController.m in Sources */,
+				81CCD5F81C8C64D800C82ED1 /* SeeResultsViewController.m in Sources */,
 				6819DE611C5AA1C300E60826 /* AppDelegate.m in Sources */,
 				6819DE5E1C5AA1C300E60826 /* main.m in Sources */,
 			);

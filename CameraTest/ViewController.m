@@ -7,12 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "SeeResultsViewController.h"
 
 #define YOUR_AFFDEX_LICENSE_STRING_GOES_HERE @"{\"token\":\"a8c57b8c92b490acd0459596818b971afd73f46d89c9f34e4357779fae5434eb\",\"licensor\":\"Affectiva Inc.\",\"expires\":\"2016-04-18\",\"developerId\":\"tom.eldridge@hotmail.com\",\"software\":\"Affdex SDK\"}"
 #ifndef YOUR_AFFDEX_LICENSE_STRING_GOES_HERE
 #endif
 
-@interface ViewController ()
+@interface ViewController()
 
 
 @end
@@ -22,6 +23,7 @@
 
 int hours, minutes, seconds;
 int secondsLeft;
+float leadershipScore = 0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -51,6 +53,14 @@ int secondsLeft;
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateCounter:) userInfo:nil repeats:YES];
 }
 
+// Pass leadership score to SeeResultsViewController
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"seeResultsSegue"]){
+        SeeResultsViewController *controller = (SeeResultsViewController *)segue.destinationViewController;
+        controller.score = [NSString stringWithFormat:@"%.2f", leadershipScore];
+    }
+}
+
 #pragma mark -
 #pragma mark Convenience Methods
 
@@ -76,17 +86,22 @@ int secondsLeft;
         }
         else {
             leadershipScoreAgg += (anger+joy+sadness)/3;
-            //NSLog(@"Leadership: %f",leadershipScore);
         }
         
         // Stop detector when timer runs out, and segue to results view
         if (secondsLeft == 0 && timer != nil) {
             [timer invalidate];
             timer = nil;
-            //faces==nil;
             [self destroyDetector];
-            float leadershipScore = leadershipScoreAgg/frames;
+            leadershipScore = leadershipScoreAgg/frames;
             NSLog(@"Leadership Final: %f",leadershipScore);
+            if (leadershipScore > 33) {
+                leadershipScore = 100;
+            }
+            else {
+                leadershipScore = 100*(leadershipScore/33);
+            }
+            [self performSegueWithIdentifier:@"seeResultsSegue" sender:self];
         }
     }
 }
@@ -115,7 +130,7 @@ int secondsLeft;
     
     // create a new detector, set the processing frame rate in frames per second, and set the license string
     self.detector = [[AFDXDetector alloc] initWithDelegate:self usingCamera:AFDX_CAMERA_FRONT maximumFaces:1];
-    self.detector.maxProcessRate = 5;
+    self.detector.maxProcessRate = 3;
     self.detector.licenseString = YOUR_AFFDEX_LICENSE_STRING_GOES_HERE;
     
     // turn on all classifiers (emotions, expressions, and emojis)
@@ -184,6 +199,4 @@ int secondsLeft;
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)startTimer:(UIButton *)sender {
-}
 @end
