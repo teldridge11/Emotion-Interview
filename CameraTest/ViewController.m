@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "SeeResultsViewController.h"
 
-#define YOUR_AFFDEX_LICENSE_STRING_GOES_HERE @"{\"token\":\"a8c57b8c92b490acd0459596818b971afd73f46d89c9f34e4357779fae5434eb\",\"licensor\":\"Affectiva Inc.\",\"expires\":\"2016-04-18\",\"developerId\":\"tom.eldridge@hotmail.com\",\"software\":\"Affdex SDK\"}"
+#define YOUR_AFFDEX_LICENSE_STRING_GOES_HERE @
 #ifndef YOUR_AFFDEX_LICENSE_STRING_GOES_HERE
 #endif
 
